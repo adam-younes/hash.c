@@ -1,4 +1,6 @@
 
+//SHA 256 implementation
+
 // word constants
 #define BYTE 8
 #define WORD 16
