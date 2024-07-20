@@ -1,10 +1,14 @@
-
 //SHA 256 implementation
+
+#include <stdint.h>
+#include <stddef.h>
 
 // word constants
 #define BYTE 8
 #define WORD 16
+#define SWORD 24
 #define DWORD 32
+#define SBYTE 56
 #define QWORD 64
 
 // right rotation operation
