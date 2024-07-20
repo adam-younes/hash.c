@@ -3,12 +3,17 @@
 #include <string.h>
 #include "sha256.h"
 
-int main(void) {
-  int input = 61;
-  
-  char hash[DWORD];
+int main() {
+    const char *input = "Hello, world!";
+    uint8_t hash[32];
+    size_t len = strlen(input);
 
-  sha256((const uint8_t *)input, BYTE, hash);
+    sha256((const uint8_t *)input, len, hash);
 
-  printf("Hash: %02x", hash);
+    printf("SHA-256 hash: ");
+    for (int i = 0; i < 32; i++)
+        printf("%02x", hash[i]);
+    printf("\n");
+
+    return 0;
 }
